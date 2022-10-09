@@ -14,13 +14,11 @@ def create_database(name):
                                      cursorclass=pymysql.cursors.DictCursor)
         print("[INFO] Connect to MySQL successful")
         with connection.cursor() as cursor:
-
             sql = f"""CREATE DATABASE {name}"""
             cursor.execute(sql)
             connection.commit()
 
             sql1 = "SHOW DATABASES"
-
             print("Count of Databases: ", cursor.execute(sql1), f"\nDatabase {name} was created")
             for db in cursor:
                 print(db)
@@ -210,4 +208,5 @@ def main():
 
 
 if __name__ == "__main__":
+    create_database(input())
     main()
