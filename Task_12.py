@@ -80,6 +80,7 @@ def base_variant():
     else:
         print("Вы не можете выполнить это действие, так как вы не задали массив")
 
+
 def reading(database, table):
     matrix = []
     colomn = int(input("Введите количество колонок> "))
